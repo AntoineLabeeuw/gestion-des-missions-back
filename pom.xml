@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>dev</groupId>
@@ -97,7 +99,6 @@
 			</plugin>
 		</plugins>
 	</build>
-
 	<profiles>
 		<profile>
 			<id>dev-h2</id>
@@ -162,7 +163,28 @@
 				</dependency>
 			</dependencies>
 		</profile>
-
+		<profile>
+			<id>dep-postgresql</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<jdbc.driver>org.postgresql.Driver</jdbc.driver>
+				<jdbc.url></jdbc.url>
+				<jdbc.user></jdbc.user>
+				<jdbc.pass></jdbc.pass>
+				<jpa.hibernate.ddl>update</jpa.hibernate.ddl>
+				<jdbc.dialect>org.hibernate.dialect.PostgreSQL92Dialect</jdbc.dialect>
+				<jdbc.connections.max.active>1</jdbc.connections.max.active>
+			</properties>
+			<dependencies>
+				<dependency>
+					<groupId>org.postgresql</groupId>
+					<artifactId>postgresql</artifactId>
+					<scope>runtime</scope>
+				</dependency>
+			</dependencies>
+		</profile>
 	</profiles>
 
 
