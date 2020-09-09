@@ -89,7 +89,6 @@
 			<artifactId>spring-boot-starter-mail</artifactId>
 		</dependency>
 	</dependencies>
-
 	<build>
 		<finalName>back</finalName>
 		<plugins>
@@ -186,6 +185,4 @@
 			</dependencies>
 		</profile>
 	</profiles>
-
-
 </project>
