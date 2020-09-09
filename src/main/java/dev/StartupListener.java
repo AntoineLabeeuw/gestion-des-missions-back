@@ -72,7 +72,7 @@ public class StartupListener {
 		col2.setEmail("user@dev.fr");
 		col2.setMotDePasse(passwordEncoder.encode("superpass"));
 		col2.setRole(Role.ROLE_UTILISATEUR);
-		//this.collegueRepo.save(col2);
+		this.collegueRepo.save(col2);
 
 		Collegue col3 = new Collegue();
 		// col3.setSignatureNumerique(new SignatureNumerique());
@@ -81,9 +81,9 @@ public class StartupListener {
 		col3.setEmail("manager@dev.fr");
 		col3.setMotDePasse(passwordEncoder.encode("superpass"));
 		col3.setRole(Role.ROLE_MANAGER);
-		//this.collegueRepo.save(col3);
+		this.collegueRepo.save(col3);
 
-/*
+
 		// Création de missions pour un collègue
 		Nature nat1 = new Nature();
 		nat1.setLibelle("Formation");
@@ -269,6 +269,5 @@ public class StartupListener {
 		this.missionRepo.save(mis5);
 		this.missionRepo.save(mis6);
 		this.missionRepo.save(mis7);
-		*/
 	}
 }
