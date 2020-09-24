@@ -102,7 +102,7 @@
 		<profile>
 			<id>dev-h2</id>
 			<activation>
-				<activeByDefault>true</activeByDefault>
+				<activeByDefault>false</activeByDefault>
 			</activation>
 			<properties>
 				<jdbc.driver>org.h2.Driver</jdbc.driver>
@@ -165,7 +165,7 @@
 		<profile>
 			<id>dep-postgresql</id>
 			<activation>
-				<activeByDefault>false</activeByDefault>
+				<activeByDefault>true</activeByDefault>
 			</activation>
 			<properties>
 				<jdbc.driver>org.postgresql.Driver</jdbc.driver>
