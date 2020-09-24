@@ -172,7 +172,7 @@
 				<jdbc.url></jdbc.url>
 				<jdbc.user></jdbc.user>
 				<jdbc.pass></jdbc.pass>
-				<jpa.hibernate.ddl>update</jpa.hibernate.ddl>
+				<jpa.hibernate.ddl>create-drop</jpa.hibernate.ddl>
 				<jdbc.dialect>org.hibernate.dialect.PostgreSQL92Dialect</jdbc.dialect>
 				<jdbc.connections.max.active>1</jdbc.connections.max.active>
 			</properties>
